@@ -16,7 +16,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8501:8501"
-    command: streamlit run app.py --server.port 8501
+    command: streamlit run streamlit_app.py --server.port 8501
 
 
 # The commented out section below is an example of how to define a PostgreSQL

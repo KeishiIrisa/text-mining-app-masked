@@ -1,4 +1,5 @@
 streamlit
 mecab-python3
+unidic-lite
 wordcloud
 opencv-python-headless

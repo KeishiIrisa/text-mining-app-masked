@@ -1,4 +1,6 @@
 import io
+import requests
+import zipfile
 import MeCab
 import pandas as pd
 import streamlit as st
@@ -8,6 +10,16 @@ from masking import masking
 import numpy as np
 from PIL import Image
 import cv2
+
+# フォントファイルのURL
+font_url = "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip"
+
+# フォントファイルをダウンロード
+response = requests.get(font_url)
+
+# フォントファイルを解凍
+z = zipfile.ZipFile(io.BytesIO(response.content))
+z.extractall()
 
 # ページのレイアウトを設定
 st.set_page_config(

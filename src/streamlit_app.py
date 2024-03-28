@@ -24,7 +24,7 @@ z.extractall()
 # ページのレイアウトを設定
 st.set_page_config(
     page_title="テキスト可視化",
-    layout="wide",  # wideにすると横長なレイアウトに
+    layout="wide",
     initial_sidebar_state="expanded"
 )
 

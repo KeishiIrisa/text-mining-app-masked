@@ -1,4 +1,6 @@
 import io
+import requests
+import zipfile
 import MeCab
 import pandas as pd
 import streamlit as st
@@ -9,10 +11,20 @@ import numpy as np
 from PIL import Image
 import cv2
 
+# フォントファイルのURL
+font_url = "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip"
+
+# フォントファイルをダウンロード
+response = requests.get(font_url)
+
+# フォントファイルを解凍
+z = zipfile.ZipFile(io.BytesIO(response.content))
+z.extractall()
+
 # ページのレイアウトを設定
 st.set_page_config(
     page_title="テキスト可視化",
-    layout="wide",  # wideにすると横長なレイアウトに
+    layout="wide",
     initial_sidebar_state="expanded"
 )
 
@@ -42,7 +54,7 @@ if uploaded_file is not None:
             with st.spinner("Generating..."):
                 io_string = io.StringIO(uploaded_file.getvalue().decode("shift-jis"))
                 text = io_string.read()
-                tagger = MeCab.Tagger()
+                tagger = MeCab.Tagger('-r/dev/null -d/home/hoge/mydic')
                 node = tagger.parseToNode(text)
                 words = []
                 while node:
@@ -73,7 +85,7 @@ if uploaded_file is not None:
             with st.spinner("Generating..."):
                 io_string = io.StringIO(uploaded_file.getvalue().decode("shift-jis"))
                 text = io_string.read()
-                tagger = MeCab.Tagger()
+                tagger = MeCab.Tagger('-r/dev/null -d/home/hoge/mydic')
                 node = tagger.parseToNode(text)
 
                 # 品詞ごとに出現単語と出現回数をカウント
@@ -120,7 +132,7 @@ if uploaded_file is not None:
                 with st.spinner("Generating..."):
                     io_string = io.StringIO(uploaded_file.getvalue().decode("shift-jis"))
                     text = io_string.read()
-                    tagger = MeCab.Tagger()
+                    tagger = MeCab.Tagger('-r/dev/null -d/home/hoge/mydic')
                     node = tagger.parseToNode(text)
                     words = []
                     while node:

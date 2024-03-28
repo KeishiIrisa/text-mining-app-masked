@@ -29,5 +29,5 @@ RUN wget https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexg00401.zip
 RUN unzip ipaexg00401.zip && rm -f ipaexg00401.zip
 
 # ライブラリのインストール
-RUN pip install streamlit mecab-python3 wordcloud opencv-python-headless
+RUN pip install streamlit mecab-python3 unidic-lite wordcloud opencv-python-headless
 

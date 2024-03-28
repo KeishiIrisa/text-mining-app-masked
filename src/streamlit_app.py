@@ -56,7 +56,7 @@ if uploaded_file is not None:
                     width=800,
                     height=800,
                     background_color="white",
-                    font_path="./ipaexg00401/ipaexg.ttf",  # Fontを指定
+                    # font_path="./ipaexg00401/ipaexg.ttf",  # Fontを指定
                 )
                 # ワードクラウドを作成
                 wc.generate_from_frequencies(word_count)
@@ -156,7 +156,7 @@ if uploaded_file is not None:
                         stopwords=stopwords,
                         contour_width=3,
                         contour_color='steelblue',
-                        font_path="./ipaexg00401/ipaexg.ttf",  # Fontを指定
+                        # font_path="./ipaexg00401/ipaexg.ttf",  # Fontを指定
                         )
                     
                     wc.generate_from_frequencies(word_count)

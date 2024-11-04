@@ -1,40 +1,40 @@
-# テキストマイニングアプリ
+# Text Mining App
 
-このアプリケーションは、テキストデータから有用な情報を抽出するためのツールを提供します。
+This application provides tools to extract useful information from text data.
 
-## ① ワードクラウド
+## ① Word Cloud
 
-### ワードクラウドとは？
+### What is a Word Cloud?
 
-ワードクラウドは、テキストデータ内の単語の出現頻度を視覚的に表現したものです。よく使われる単語ほど大きく表示されます。
+A word cloud visually represents the frequency of words in a text. Words that appear more frequently are displayed larger.
 
-### 例
+### Example
 
-(夏目漱石『こころ』)
+(Natsume Soseki's *Kokoro*)
 ![](2024-03-28-23-07-32.png)
 
-## ② マスクワードクラウド
+## ② Masked Word Cloud
 
-### マスクワードクラウドとは？
+### What is a Masked Word Cloud?
 
-マスクワードクラウドは、指定した画像の形状に合わせてワードクラウドを作成します。これにより、視覚的なインパクトを増すことができます。
+A masked word cloud generates a word cloud that follows the shape of a specified image, creating a more visually impactful representation.
 
-### 例
+### Example
 
-(夏目漱石『こころ』, ピカチューの型)
+(Natsume Soseki's *Kokoro*, Pikachu shape)
 ![](2024-03-28-22-56-29.png)
 
-## ③ 出現頻度表
+## ③ Frequency Table
 
-### 出現頻度表とは？
+### What is a Frequency Table?
 
-出現頻度表は、テキストデータ内の単語の出現回数を一覧表にしたものです。これにより、どの単語がテキスト内で頻繁に使われているかを一目で確認することができます。
+A frequency table lists the occurrence count of each word in the text, allowing you to easily identify which words are used most frequently.
 
-### 例
+### Example
 
-**名詞**
+**Nouns**
 
-| 出現単語 | 出現回数 |
+| Word         | Frequency |
 | -------- | -------- |
 | 先生     | 600      |
 | 事       | 574      |
@@ -47,9 +47,9 @@
 | 中       | 261      |
 | ...      | ...      |
 
-**形容詞**
+**Adjectives**
 
-| 出現単語 | 出現回数 |
+| Word         | Frequency |
 | -------- | -------- |
 | 長い     | 21       |
 | 黒い     | 20       |
@@ -64,9 +64,9 @@
 | 暗い     | 12       |
 | ...      | ...      |
 
-**動詞**
+**Verbs**
 
-| 出現単語 | 出現回数 |
+| Word         | Frequency |
 | -------- | -------- |
 | し       | 1,662    |
 | い       | 957      |
